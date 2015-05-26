@@ -1,0 +1,26 @@
+package les4as1mirrorarr;
+
+import java.util.Arrays;
+
+public class Les4As1MirrorArr {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int arr[] = {1, 2, 3, 4};
+        int temp1;
+        System.out.println(Arrays.toString(arr));
+        int j = arr.length - 1;
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (i <= j) {
+                temp1 = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp1;
+                j--;
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+
+}
